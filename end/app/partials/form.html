@@ -1,0 +1,26 @@
+<div class="container" style="margin-top:50px;">
+  <div class="row">
+    <h1>Nuevo producto</h1>
+    <form name="productForm" data-ng-submit="save()">
+      <fieldset>
+        <label>* Nombre</label>
+        <input type="text" data-ng-model="newProduct.name" placeholder="Nombre del producto" required>
+
+        <label>* Precio</label>
+        <div class="input-prepend input-append">
+          <span class="add-on">$</span>
+          <input class="span2" type="number" data-ng-model="newProduct.price" placeholder="Precio" required>
+        </div>
+
+        <span class="help-block">(*) Campos obligatorios</span>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" data-ng-disabled="productForm.$invalid">Guardar</button>
+          <a href="#/products" class="btn">Cancelar</a>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+
+</div>

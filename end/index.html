@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-ng-app="main.application">
+  <head>
+    <title>Product Manager - GDG Guadalajara</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+      body    { background-color: #F7F7F6; }
+      .login  { padding-top: 65px; }
+      .center { float: none; margin-left: auto; margin-right: auto; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand " href="#/">
+            <i class="icon-shopping-cart"></i> Product Manager
+          </a>
+
+          <ul class="nav pull-right" data-ng-show="isUserLoggedOn()" data-ng-controller="LoginCtrl">
+            <li><a href="#"><i class="icon-user"></i> {{ currentUser.email }}</a></li>
+            <li><a href="#" data-ng-click="logout()"><i class="icon-off"></i> Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <!-- section data-ng-view=""></section -->
+    <div class="container" style="margin-top:50px;">
+
+      <div class="span8" data-ng-view=""></div>
+      <div class="span3" data-ng-show="isUserLoggedOn()">
+        <div class="well" data-ng-controller="ChatCtrl">
+          <h3>Chat</h3>
+
+          <div style="height:300px; overflow:auto;">
+            <p data-ng-repeat="msg in messages"><em>{{ msg.from }}: </em>{{ msg.content }}</p>
+          </div>
+
+          <form class="form-inline" data-ng-submit="addMessage()">
+            <input type="text" data-ng-model="message" class="input-medium" placeholder="Message...">
+
+            <button class="btn" type="submit">
+              <i class="icon-chevron-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Container Ends -->
+
+    <footer>
+      <p class="text-center muted ">&copy; Copyright 2013 - <a href="http://gdgguadalajara.org">GDG Guadalajara</a></p>
+    </footer>
+
+    <script src="//cdn.firebase.com/v0/firebase.js"></script>
+    <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+
+
+    <script src="app/main.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/services.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Manager - GDG Guadalajara</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+      body    { background-color: #F7F7F6; }
+      .login  { padding-top: 65px; }
+      .center { float: none; margin-left: auto; margin-right: auto; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand " href="#/">
+            <i class="icon-shopping-cart"></i> Product Manager
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Container -->
+    <section>
+      <div class="container login">
+        <div class="row ">
+          <div class="center span4 well">
+            <legend>Iniciar Sesión</legend>
+            <div class="alert alert-error">
+              <a class="close" data-dismiss="alert" href="#">×</a>Usuario y/o contraseña incorrecta.
+            </div>
+            <form action="">
+              <input type="text" class="span4" placeholder="Usuario" />
+              <input type="password" class="span4" placeholder="Contraseña" />
+
+              <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main Container Ends -->
+
+    <footer>
+      <p class="text-center muted ">&copy; Copyright 2013 - <a href="http://gdgguadalajara.org">GDG Guadalajara</a></p>
+    </footer>
+  </body>
+
+</html>

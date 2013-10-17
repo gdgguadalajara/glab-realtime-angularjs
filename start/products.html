@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Manager - GDG Guadalajara</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand " href="#/">
+            <i class="icon-shopping-cart"></i> Product Manager
+          </a>
+          <ul class="nav">
+            <li><a href="#/products">Productos</a></li>
+            <li><a href="#/users">Usuarios</a></li>
+          </ul>
+          <ul class="nav pull-right">
+            <li><a href="#"><i class="icon-user"></i> email@example.com</a></li>
+            <li><a href="#"><i class="icon-off"></i> Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:50px;">
+      <div class="row">
+        <h1>Productos</h1>
+        <ul class="nav nav-pills pull-right">
+          <li class="active">
+            <a href="#">Nuevo producto</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row">
+        <p class="alert alert-info">No hay productos que mostrar</p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th><a href="#">Nombre</a></th>
+              <th>Precio</th>
+              <th>Fecha de alta</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Samsum Galaxy</td>
+              <td>$ 7, 000.00</td>
+              <td>dd/MM/yyyy HH:mm:ss</td>
+              <td>
+                <a href="">
+                  <i class="icon-trash"></i>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p class="text-center muted ">&copy; Copyright 2013 - <a href="http://gdgguadalajara.org">GDG Guadalajara</a></p>
+    </footer>
+
+  </body>
+
+</html>
